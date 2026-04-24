@@ -1,0 +1,152 @@
+/* Color System */
+/* "gray-accent" is for hovered tab bgs and borders in general */
+
+:root {
+  --bg-color: #e9e9e9;
+  --text-color: #414141;
+  --gray-accent: #d5d5d5;
+  --red-accent: #a62452;
+  --blue-accent: #2624d1;
+  --action-bg: #d5d5d5;
+  --reopen-hover-bg: #c2c2e4;
+  --clear-hover-bg: #dcc2cb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #131313;
+    --text-color: #a2a2a2;
+    --gray-accent: #272727;
+    --red-accent: #a62452;
+    --blue-accent: #2624d1;
+    --action-bg: #171717;
+    --reopen-hover-bg: #171639;
+    --clear-hover-bg: #301620;
+  }
+}
+
+/* Basic Styling */
+
+html, body {
+  scrollbar-width: none !important;
+  height: 100%;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: normal;
+  cursor: default;
+  pointer-events: none;
+}
+
+img {
+  width: 16px;
+  height: 16px;
+  padding-right: 8px;
+}
+
+body {
+  font-family: monospace;
+  font-size: 1em;
+  font-weight: normal;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  position: relative;
+  width: fit-content;
+  min-width: 192px;
+  max-width: 330px;
+  padding: 1px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+ul {
+  display: block;
+  list-style: none;
+  padding: 0px 0px 0px 0px;
+  margin: 4px 4px 4px 4px;
+}
+
+ul li {
+  padding: 4px 8px 4px 8px;
+  margin: 0px 0px 4px 0px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+ul li:hover  {
+  background-color: var(--gray-accent);
+}
+
+button {
+  width: 100%;
+  margin: 0px;
+  padding: 6px;
+  font-size: 0.75em;
+  font-weight: bold;
+  background-color: var(--action-bg);
+  border: 1px solid var(--gray-accent);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: none;
+}
+
+/* Classes/IDs */
+
+.expiry-meta {
+  display: block;
+  font-size: 0.9em;
+  color: var(--red-accent);
+}
+
+.delete-button {
+  margin: 0px;
+  padding: 0px 4px 0px 12px; 
+  color: var(--bg-color); 
+  font-size: 1.5em; 
+  cursor: pointer; 
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.delete-button:hover {
+  color: var(--red-accent);
+}
+
+#buttonBox {
+  padding: 0px 0px 0px 0px;
+  margin: 1px 0px 1px 1px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  z-index: 1;
+}
+
+#clearAll {
+  color: var(--red-accent);
+  border-radius: 0px 0px 8px 8px;
+}
+
+#clearAll:hover {
+  background-color: var(--clear-hover-bg);
+}
+
+#reopenAll {
+  color: var(--blue-accent);
+  border-radius: 0px 0px 0px 0px;
+  border-bottom: 0px;
+}
+
+#reopenAll:hover {
+  background-color: var(--reopen-hover-bg);
+}

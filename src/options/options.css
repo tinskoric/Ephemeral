@@ -1,0 +1,69 @@
+/* Color System */
+/* "gray-accent" is for hovered tab bgs and borders in general */
+
+:root {
+  --bg-color: #e9e9e9;
+  --text-color: #414141;
+  --gray-accent: #d5d5d5;
+  --blue-accent: #2624d1;
+  --action-bg: #d5d5d5;
+  --action-hover-bg: #c2c2e4;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #131313;
+    --text-color: #a2a2a2;
+    --gray-accent: #272727;
+    --blue-accent: #2624d1;
+    --action-bg: #171717;
+    --action-hover-bg: #171639;
+  }
+}
+
+/* Basic Styling */
+
+body {
+  font-family: monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 600px;
+  margin: 20px;
+  padding: 0px 20px 0px 20px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+textarea {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--gray-accent);
+  padding: 8px;
+  border-radius: 8px;
+  resize: none;
+}
+
+button {
+  margin: 10px 0px 0px 0px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  background-color: var(--action-bg);
+  color: var(--text-color);
+  border: 1px solid var(--gray-accent);
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: var(--action-hover-bg);
+}
+
+/* Settings update class */
+
+#status {
+  margin: 10px 0px 0px 0px;
+  color: var(--blue-accent);
+  display: none;
+}

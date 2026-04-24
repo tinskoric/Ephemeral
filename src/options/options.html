@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <h1>Options</h1>
+  <div>
+    <p>Expiry Time (days before individual saved tabs are removed): <span id="expiryValue">7</span></p>
+    <input type="range" id="timeToExpiryInput" min="1" max="30" step="1" value="7">
+  </div>
+  <div>
+    <p>Max Tabs (number of tabs before the oldest are removed): <span id="maxValue">32</span></p>
+    <input type="range" id="maxTabsInput" min="16" max="128" step="8" value="32">
+  </div>
+  <div>
+    <p>Whitelisted Domains (comma separated)</p>
+    <textarea id="whitelistInput" rows="4"></textarea>
+  </div>
+  <button id="saveButton">Save Config</button>
+  <div id="status" class="status">Changes Saved!</div>
+  <script src="options.js"></script>
+</body>
+</html>
